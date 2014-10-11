@@ -1,6 +1,7 @@
 #ifndef MUSICPLAYER_H
 #define MUSICPLAYER_H
 
+#include <iostream>
 #include <QMainWindow>
 #include <QtMultimedia>
 
@@ -21,8 +22,12 @@ private slots:
 
     void on_loadButton_clicked();
 
+    void on_skipButton_clicked();
+
 private:
     Ui::musicPlayer *ui;
+    QMediaPlaylist* playlist;
+    QMediaPlayer* player;
 
 };
 
